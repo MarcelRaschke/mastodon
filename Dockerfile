@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 as build-dep
+FROM ubuntu:20.10 as build-dep
 
 # Use bash for the shell
 SHELL ["bash", "-c"]
@@ -76,7 +76,7 @@ RUN cd /opt/mastodon && \
 	bundle install -j$(nproc) && \
 	yarn install --pure-lockfile
 
-FROM ubuntu:20.04
+FROM ubuntu:20.10
 
 # Copy over all the langs needed for runtime
 COPY --from=build-dep /opt/node /opt/node
