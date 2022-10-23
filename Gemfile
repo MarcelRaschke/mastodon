@@ -6,16 +6,16 @@ ruby '>= 2.5.0', '< 3.0.0'
 gem 'pkg-config', '~> 1.4'
 
 gem 'puma', '~> 5.0'
-gem 'rails', '~> 5.2.8.1'
+gem 'rails', '~> 5.2.4.4'
 gem 'sprockets', '~> 3.7.2'
 gem 'thor', '~> 1.0'
-gem 'rack', '~> 2.2.3'
+gem 'rack', '~> 3.0.0'
 
-gem 'hamlit-rails', '~> 0.2'
+gem 'hamlit-rails', '~> 0.2', '>= 0.2.3'
 gem 'pg', '~> 1.2'
 gem 'makara', '~> 0.4', '>= 0.4.1'
 gem 'pghero', '~> 2.7', '>= 2.7.2'
-gem 'dotenv-rails', '~> 2.7'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 
 gem 'aws-sdk-s3', '~> 1.85', require: false
 gem 'fog-core', '<= 2.1.0'
@@ -25,7 +25,7 @@ gem 'paperclip-av-transcoder', '~> 0.6'
 gem 'streamio-ffmpeg', '~> 3.0'
 gem 'blurhash', '~> 0.1'
 
-gem 'active_model_serializers', '~> 0.10'
+gem 'active_model_serializers', '~> 0.10', '>= 0.10.10'
 gem 'addressable', '~> 2.7'
 gem 'bootsnap', '~> 1.5', require: false
 gem 'browser'
@@ -33,8 +33,8 @@ gem 'charlock_holmes', '~> 0.7.7'
 gem 'iso-639'
 gem 'chewy', '~> 5.1'
 gem 'cld3', '~> 3.5.0'
-gem 'devise', '~> 4.7'
-gem 'devise-two-factor', '~> 3.1'
+gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'devise-two-factor', '~> 3.1', '>= 3.1.0'
 
 group :pam_authentication, optional: true do
   gem 'devise_pam_authenticatable2', '~> 9.2', '>= 9.2.0'
@@ -42,13 +42,13 @@ end
 
 gem 'net-ldap', '~> 0.16'
 gem 'omniauth-cas', '~> 2.0'
-gem 'omniauth-saml', '~> 1.10'
-gem 'omniauth', '~> 1.9'
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-saml', '~> 2.0', '>= 2.0.0'
+gem 'omniauth', '~> 2.1', '>= 2.1.0'
+gem 'omniauth-rails_csrf_protection', '~> 0.1', '>= 0.1.2'
 
 gem 'color_diff', '~> 0.1'
 gem 'discard', '~> 1.2', '>= 1.2.0'
-gem 'doorkeeper', '~> 5.4'
+gem 'doorkeeper', '~> 5.4', '>= 5.4.0'
 gem 'ed25519', '~> 1.2'
 gem 'fast_blank', '~> 1.0'
 gem 'fastimage'
@@ -74,8 +74,8 @@ gem 'posix-spawn'
 gem 'pundit', '~> 2.1'
 gem 'premailer-rails'
 gem 'rack-attack', '~> 6.3'
-gem 'rack-cors', '~> 1.1', require: 'rack/cors'
-gem 'rails-i18n', '~> 5.1'
+gem 'rack-cors', '~> 1.1', '>= 1.1.1', require: 'rack/cors'
+gem 'rails-i18n', '~> 5.1', '>= 5.1.3'
 gem 'rails-settings-cached', '~> 0.6', '>= 0.6.6'
 gem 'redis', '~> 4.2', require: ['redis', 'redis/connection/hiredis']
 gem 'mario-redis-lock', '~> 1.2', require: 'redis_lock'
@@ -88,14 +88,14 @@ gem 'sidekiq-scheduler', '~> 3.0'
 gem 'sidekiq-unique-jobs', '~> 6.0'
 gem 'sidekiq-bulk', '~>0.2.0'
 gem 'simple-navigation', '~> 4.1'
-gem 'simple_form', '~> 5.0'
-gem 'sprockets-rails', '~> 3.2', require: 'sprockets/railtie'
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.2', require: 'sprockets/railtie'
 gem 'stoplight', '~> 2.2.1'
 gem 'strong_migrations', '~> 0.7', '>= 0.7.2'
 gem 'tty-prompt', '~> 0.22', require: false
 gem 'twitter-text', '~> 1.14'
 gem 'tzinfo-data', '~> 1.2020'
-gem 'webpacker', '~> 5.2'
+gem 'webpacker', '~> 5.2', '>= 5.2.1'
 gem 'webpush'
 gem 'webauthn', '~> 3.0.0.alpha1'
 
@@ -106,10 +106,10 @@ gem 'rdf-normalize', '~> 0.4'
 group :development, :test do
   gem 'fabrication', '~> 2.21'
   gem 'fuubar', '~> 2.5'
-  gem 'i18n-tasks', '~> 0.9', require: false
+  gem 'i18n-tasks', '~> 0.9', '>= 0.9.31', require: false
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
 end
 
 group :production, :test do
@@ -117,11 +117,11 @@ group :production, :test do
 end
 
 group :test do
-  gem 'capybara', '~> 3.33'
+  gem 'capybara', '~> 3.33', '>= 3.33.0'
   gem 'climate_control', '~> 0.2'
   gem 'faker', '~> 2.14'
   gem 'microformats', '~> 4.2'
-  gem 'rails-controller-testing', '~> 1.0'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
   gem 'rspec-sidekiq', '~> 3.1'
   gem 'simplecov', '~> 0.19', require: false
   gem 'webmock', '~> 3.10'
@@ -132,14 +132,14 @@ end
 group :development do
   gem 'active_record_query_trace', '~> 1.8'
   gem 'annotate', '~> 3.1', '>= 3.1.1'
-  gem 'better_errors', '~> 2.9'
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'binding_of_caller', '~> 0.7'
   gem 'bullet', '~> 6.1'
   gem 'letter_opener', '~> 1.7'
-  gem 'letter_opener_web', '~> 1.4'
+  gem 'letter_opener_web', '~> 1.4', '>= 1.4.0'
   gem 'memory_profiler'
   gem 'rubocop', '~> 1.3', require: false
-  gem 'rubocop-rails', '~> 2.8', require: false
+  gem 'rubocop-rails', '~> 2.8', '>= 2.8.1', require: false
   gem 'brakeman', '~> 4.10', require: false
   gem 'bundler-audit', '~> 0.7', require: false
 
@@ -152,8 +152,8 @@ group :development do
 end
 
 group :production do
-  gem 'lograge', '~> 0.11'
-  gem 'redis-rails', '~> 5.0'
+  gem 'lograge', '~> 0.11', '>= 0.11.2'
+  gem 'redis-rails', '~> 5.0', '>= 5.0.2'
 end
 
 gem 'concurrent-ruby', require: false
